@@ -7,5 +7,5 @@
 #'
 #' @examples mysum(1:10)
 mysum <- function(x){
-  summary(x)
+  summary(x);
 }
