@@ -1,6 +1,6 @@
 #' A new summary function
 #'
-#' @param x
+#' @param x A vector
 #'
 #' @returns A summary of x
 #' @export

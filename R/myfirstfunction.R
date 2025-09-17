@@ -1,6 +1,6 @@
 #' My first function
 #'
-#' @param x
+#' @param x A vector
 #'
 #' @returns A list with components 'x' and 'y', where 'y' is the square of 'x'.
 #' @export
