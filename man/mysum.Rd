@@ -2,7 +2,7 @@
 % Please edit documentation in R/mysum.R
 \name{mysum}
 \alias{mysum}
-\title{mysum}
+\title{A new summary function}
 \usage{
 mysum(x)
 }
@@ -10,10 +10,10 @@ mysum(x)
 \item{x}{}
 }
 \value{
-Something
+A summary of x
 }
 \description{
-mysum
+A new summary function
 }
 \examples{
 mysum(1:10)
