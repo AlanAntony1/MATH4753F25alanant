@@ -1,0 +1,56 @@
+---
+title: "Birthday"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Birthday}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(MATH4753F25alanant)
+```
+
+## Mathmateical Derivation that two or more people in a class of size n have the same birthday.
+
+A = {2 or more people have the same birthday}
+
+A' = {Every person has a different birthday}
+
+$$ 1 = P(A) + P(A') $$
+$$ P(A') = \frac{365 \cdot 364 \cdot 363 ... \cdot (365 - n+1)}{365^n}$$
+
+Mutiply the top and the bottom by $(365-n)!$
+
+$$ P(A') = \frac{365!}{365^n(365-n)!} = \frac{n!\cdot\binom{365}{n}}{365^n} $$
+
+$$ P(A) = 1 - P(A') = 1 -\frac{n!\cdot\binom{365}{n}}{365^n}$$
+
+
+## Reformulation of this probability using lfactorial and lchoose.
+
+$$P(A') = \frac{{}^{365}P_n}{365^n}$$
+$$log(P(A')) = log({}^{365}P_n) - nlog(365)$$
+$$ = log(n!) + log choose(365, n) - nlog(365)$$
+$$ = lfactorial(n) + lchoose(365,n) - nlog(365)$$
+
+$$P(A) = 1 - P(A')$$
+$$ = exp(1 - lfactorial(n) + lchoose(365,n) - nlog(365))$$
+
+## Show the body of the function.
+
+1 - exp(lchoose(365,x) + lfactorial(x) - x*log(365))
+
+## Run the function.
+
+```{r}
+birthday(20:25)
+```
+
