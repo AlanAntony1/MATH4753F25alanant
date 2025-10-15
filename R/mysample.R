@@ -3,6 +3,7 @@
 #' @param n an integer that describes the size of each sample
 #' @param iter an integer that describes the amount of times a trial should be run
 #' @param time time between each iteration
+#' @importFrom grDevices rainbow
 #'
 #' @returns
 #' @export

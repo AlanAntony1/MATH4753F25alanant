@@ -9,7 +9,7 @@ Authors@R: c(
       role = c("aut", "cre")
     )
   )
-Description: Lab Code for 2025
+Description: Lab Code for 2025.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
@@ -18,5 +18,7 @@ BugReports: https://github.com/AlanAntony1/MATH4753F25alanant/issues
 RoxygenNote: 7.3.2
 Suggests: 
     knitr,
-    rmarkdown
+    rmarkdown,
+    testthat (>= 3.0.0)
 VignetteBuilder: knitr
+Config/testthat/edition: 3
