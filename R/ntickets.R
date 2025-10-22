@@ -11,7 +11,7 @@
 #' @examples
 ntickets <- function(N, gamma, p){
   #Discrete Distribution
-  xx <- seq(N, N+100, by = 1)
+  xx <- seq(N, N+200, by = 1)
 
   discrete <- sapply(xx, function(n){
     pbinom(N, n, p) - 1 + gamma
