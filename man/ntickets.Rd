@@ -19,3 +19,7 @@ The amount of seats that an airline should sell, based on the probability that a
 \description{
 Overbooking Problem
 }
+\examples{
+ntickets(N = 400, gamma = 0.02, p = 0.95)
+
+}
